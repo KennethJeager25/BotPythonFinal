@@ -20,7 +20,7 @@ class Bot:
         
 
     def smartPID(self):
-        self.navegador = './chromedriver'
+        self.navegador = 'chromedriver'
         self.url='https://mypid.smartpid.com/mypid/'
         chromeOptions = Options()
         chromeOptions.headless = True
