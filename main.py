@@ -1,7 +1,7 @@
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver import FirefoxOptions
+from selenium.webdriver.chrome.options import Options
 import time
 from classTempCH1 import temp_CH1
 from classTempCH2 import temp_CH2
@@ -21,12 +21,11 @@ class Bot:
 
     def smartPID(self):
         
-        self.navegador = './geckodriver'
+        self.navegador = './chromedriver'
         self.url='https://mypid.smartpid.com/mypid/'
-        opts = FirefoxOptions()
-        opts.add_argument("--headless")
-
-        driver = webdriver.Firefox(options=opts)
+        options = Options()
+        options.headless = True
+        driver = webdriver.Chrome(options=options)
         driver.get(self.url)
 
         driver.find_element_by_xpath('//*[@id="sign-in-container"]/ion-grid/ion-row[1]/ion-col/ion-list/ion-item[1]/ion-input/input').send_keys('marrito@me.com')
