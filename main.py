@@ -28,7 +28,6 @@ class Bot:
 
         driver = webdriver.Firefox(options=opts)
         driver.get(self.url)
-        driver.maximize_window()
 
         driver.find_element(By.XPATH,'//*[@id="sign-in-container"]/ion-grid/ion-row[1]/ion-col/ion-list/ion-item[1]/ion-input/input').send_keys('marrito@me.com')
         driver.find_element(By.XPATH,'//*[@id="sign-in-container"]/ion-grid/ion-row[1]/ion-col/ion-list/ion-item[2]/ion-input/input').send_keys('goodbeer#2022')
