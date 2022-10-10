@@ -29,7 +29,7 @@ class Bot:
         options.add_argument("-headless")
         ffprofile = FirefoxProfile()
         ffprofile.set_preference("intl.accept_languages", "en-US")
-        driver = Firefox(firefox_profile=ffprofile, firefox_options=options)
+        driver = Firefox(firefox_profile=ffprofile,options=options)
         driver.get(self.url)
 
         driver.find_element(By.XPATH,'//*[@id="sign-in-container"]/ion-grid/ion-row[1]/ion-col/ion-list/ion-item[1]/ion-input/input').send_keys('marrito@me.com')
