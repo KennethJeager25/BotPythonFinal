@@ -1,6 +1,7 @@
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver import FirefoxOptions
 import time
 from classTempCH1 import temp_CH1
 from classTempCH2 import temp_CH2
@@ -19,10 +20,13 @@ class Bot:
         
 
     def smartPID(self):
+        
         self.navegador = './geckodriver'
         self.url='https://mypid.smartpid.com/mypid/'
+        opts = FirefoxOptions()
+        opts.add_argument("--headless")
 
-        driver = webdriver.Firefox(executable_path=self.navegador)
+        driver = webdriver.Firefox(executable_path=self.navegador,options=opts)
         driver.get(self.url)
         driver.maximize_window()
 
