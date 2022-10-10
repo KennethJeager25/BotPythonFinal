@@ -8,6 +8,7 @@ from classTempCH1 import temp_CH1
 from classTempCH2 import temp_CH2
 from classApi import Api
 
+
 class Bot:
 
     def __init__(self,url='',navegador=''):
@@ -20,12 +21,12 @@ class Bot:
         
 
     def smartPID(self):
-        self.navegador = 'chromedriver'
+        self.navegador = './geckodriver'
         self.url='https://mypid.smartpid.com/mypid/'
         chromeOptions = Options()
         chromeOptions.headless = True
 
-        driver = webdriver.Chrome(self.navegador,options=chromeOptions)
+        driver = webdriver.Firefox(executable_path=self.navegador,options=chromeOptions)
         driver.get(self.url)
         driver.maximize_window()
 
