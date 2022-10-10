@@ -1,3 +1,4 @@
+from http.server import executable
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -25,7 +26,7 @@ class Bot:
         self.url='https://mypid.smartpid.com/mypid/'
         options = Options()
         options.headless = True
-        driver = webdriver.Chrome(options=options)
+        driver = webdriver.Chrome(executable_path=self.navegador,options=options)
         driver.get(self.url)
 
         driver.find_element(By.XPATH,'//*[@id="sign-in-container"]/ion-grid/ion-row[1]/ion-col/ion-list/ion-item[1]/ion-input/input').send_keys('marrito@me.com')
