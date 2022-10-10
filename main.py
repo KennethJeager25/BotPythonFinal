@@ -26,7 +26,7 @@ class Bot:
         opts = FirefoxOptions()
         opts.add_argument("--headless")
 
-        driver = webdriver.Firefox(executable_path=self.navegador,options=opts)
+        driver = webdriver.Firefox(options=opts)
         driver.get(self.url)
         driver.maximize_window()
 
