@@ -1,6 +1,8 @@
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.options import Options
 import time
 from classTempCH1 import temp_CH1
 from classTempCH2 import temp_CH2
@@ -23,8 +25,10 @@ class Bot:
     def smartPID(self):
         self.navegador = './chromedriver.exe'
         self.url='https://mypid.smartpid.com/mypid/'
+        chromeOptions = Options()
+        chromeOptions.headless = True
 
-        driver = webdriver.Chrome(self.navegador)
+        driver = webdriver.Chrome(executable_path=self.navegador,options=chromeOptions)
         driver.get(self.url)
         driver.maximize_window()
 
