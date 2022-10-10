@@ -1,9 +1,7 @@
 import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver import Firefox
-from selenium.webdriver.firefox.options import Options
-from selenium.webdriver import FirefoxProfile
+from selenium.webdriver import FirefoxOptions
 import time
 from classTempCH1 import temp_CH1
 from classTempCH2 import temp_CH2
@@ -25,11 +23,10 @@ class Bot:
         
         self.navegador = './geckodriver'
         self.url='https://mypid.smartpid.com/mypid/'
-        options = Options()
-        options.add_argument("-headless")
-        ffprofile = FirefoxProfile()
-        ffprofile.set_preference("intl.accept_languages", "en-US")
-        driver = Firefox(firefox_profile=ffprofile,options=options)
+        opts = FirefoxOptions()
+        opts.add_argument("--headless")
+
+        driver = webdriver.Firefox(options=opts)
         driver.get(self.url)
 
         driver.find_element(By.XPATH,'//*[@id="sign-in-container"]/ion-grid/ion-row[1]/ion-col/ion-list/ion-item[1]/ion-input/input').send_keys('marrito@me.com')
