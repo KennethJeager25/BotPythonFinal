@@ -25,7 +25,7 @@ class Bot:
         chromeOptions = Options()
         chromeOptions.headless = True
 
-        driver = webdriver.Chrome(executable_path=self.navegador,options=chromeOptions)
+        driver = webdriver.Chrome(self.navegador,options=chromeOptions)
         driver.get(self.url)
         driver.maximize_window()
 
