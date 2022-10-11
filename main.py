@@ -299,13 +299,13 @@ class Bot:
 
     def scrolldown(self):
         for j in range(14):
-            teclado.press(tecla.down)
-            teclado.release(tecla.down)
+            '{}'.format("Press(key=Key.down)")
+            '{}'.format("Release(key=Key.down)")
 
     def scrollUp(self):
         for j in range(14):
-            teclado.press(tecla.up)
-            teclado.release(tecla.up)
+            '{}'.format("Press(key=Key.up)")
+            '{}'.format("Release(key=Key.up)")
 
     def metodoApi(self):
         self.ch1.ApiRequest()
