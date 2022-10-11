@@ -6,10 +6,9 @@ import time
 from classTempCH1 import temp_CH1
 from classTempCH2 import temp_CH2
 from classApi import Api
-from pynput import keyboard
+from pynput.keyboard import Key, Controller
 
-teclado = keyboard.Controller()
-tecla = keyboard.Key()
+keyboard = Controller()
 
 
 class Bot:
@@ -299,13 +298,13 @@ class Bot:
 
     def scrolldown(self):
         for j in range(14):
-            '{}'.format("Press(key=Key.down)")
-            '{}'.format("Release(key=Key.down)")
+            keyboard.press('a')
+            keyboard.release('a')
 
     def scrollUp(self):
         for j in range(14):
-            '{}'.format("Press(key=Key.up)")
-            '{}'.format("Release(key=Key.up)")
+            keyboard.press('b')
+            keyboard.release('b')
 
     def metodoApi(self):
         self.ch1.ApiRequest()
