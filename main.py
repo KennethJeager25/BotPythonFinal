@@ -2,6 +2,7 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.keys import keys
 import time
 from classTempCH1 import temp_CH1
 from classTempCH2 import temp_CH2
@@ -89,7 +90,7 @@ class Bot:
                 if tank == 'Tank 5':
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-                    driver.execute_script("window.scrollTo(0, 1000)") 
+                    driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
                     time.sleep(1)
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[1]/ion-item/ion-input/input').send_keys(value)
@@ -100,7 +101,7 @@ class Bot:
                 if tank == 'Tank 6':
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-                    driver.execute_script("window.scrollTo(0, 1000)") 
+                    driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
                     time.sleep(1)
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-item-divider/div/div/ion-segment/ion-segment-button[2]').click()
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
@@ -112,7 +113,7 @@ class Bot:
                 if tank == 'Tank 7':
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-                    driver.execute_script("window.scrollTo(0, 1000)") 
+                    driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
                     time.sleep(1)
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[1]/ion-item/ion-input/input').send_keys(value)
@@ -123,7 +124,8 @@ class Bot:
                 if tank == 'Tank 8':
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-                    driver.execute_script("window.scrollTo(0, 1000)") 
+                    driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
+                    driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
                     time.sleep(1)
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-item-divider/div/div/ion-segment/ion-segment-button[2]').click()
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[4]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
@@ -135,7 +137,8 @@ class Bot:
                 if tank == 'Tank 9':
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-                    driver.execute_script("window.scrollTo(0, 2000)")              
+                    driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
+                    driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)    
                     time.sleep(1)
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[5]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[5]/ion-card/div[1]/ion-card-content/div[2]/div[1]/ion-card[1]/ion-grid/ion-row[2]/ion-col[1]/ion-item/ion-input/input').send_keys(value)
@@ -146,7 +149,8 @@ class Bot:
                 if tank == 'Tank 10':
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
                     driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-                    driver.execute_script("window.scrollTo(0, 2000)")  
+                    driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
+                    driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
                     time.sleep(1)
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[5]/ion-card/div[1]/ion-item-divider/div/div/ion-segment/ion-segment-button[2]').click()
                     driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[5]/ion-card/div[1]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
@@ -183,7 +187,7 @@ class Bot:
                 self.ch1.addCh1(tempCH1tank3)
                 driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
                 driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-                driver.execute_script("window.scrollTo(0, 1000)")  
+                driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
                 time.sleep(1)
                 tank = driver.find_element(By.XPATH,"/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[1]/ion-label")
                 tank5 = tank.text.split('°')
@@ -204,7 +208,7 @@ class Bot:
                 tempCH1tank7.value = tank7[0]
                 tempCH1tank7.sp = tankSp7[0]
                 self.ch1.addCh1(tempCH1tank7)
-                driver.execute_script("window.scrollTo(0, 2000)")  
+                driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
                 time.sleep(1)
                 tank = driver.find_element(By.XPATH,"/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[5]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[1]/ion-label")
                 tank9 = tank.text.split('°')
@@ -217,8 +221,8 @@ class Bot:
                 self.ch1.addCh1(tempCH1tank9)
                 self.ch1.guardarDatos()
                 self.ch1.imprimirJson()
-                driver.execute_script("window.scrollTo(0, 0)")  
-                driver.execute_script("window.scrollTo(0, 0)")  
+                driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_UP)
+                driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_UP)
                 time.sleep(4)
                 driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[1]/ion-card/div[1]/ion-item-divider/div/div/ion-segment/ion-segment-button[2]').click()
                 tank = driver.find_element(By.XPATH,"/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[1]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[2]/ion-label")
@@ -243,7 +247,7 @@ class Bot:
                 self.ch2.addCh2(tempCH2tank4)
                 driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[1]').click()
                 driver.find_element(By.XPATH,'//*[@id="myFixZone"]/ion-card-header/ion-toolbar/ion-buttons[1]/ion-button[3]').click()
-                driver.execute_script("window.scrollTo(0, 1000)")  
+                driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
                 time.sleep(1)
                 driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-item-divider/div/div/ion-segment/ion-segment-button[2]').click()
                 tank = driver.find_element(By.XPATH,"/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[3]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[2]/ion-label")
@@ -265,7 +269,7 @@ class Bot:
                 tempCH2tank8.value = tank8[0]
                 tempCH2tank8.sp = tanksp8[0]
                 self.ch2.addCh2(tempCH2tank8)
-                driver.execute_script("window.scrollTo(0, 2000)")  
+                driver.find_element(by = By.TAG_NAME, value="body").send_keys(keys.PAGE_DOWN)
                 time.sleep(1)
                 driver.find_element(By.XPATH,'/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[5]/ion-card/div[1]/ion-item-divider/div/div/ion-segment/ion-segment-button[2]').click()
                 tank = driver.find_element(By.XPATH,"/html/body/app-root/ion-app/ion-split-pane/ion-router-outlet/app-dashboard/ion-content/ion-grid/ion-row/ion-col[5]/ion-card/div[1]/ion-card-content/div[1]/div[1]/ion-card/ion-row[2]/ion-col[1]/div[2]/ion-label")
